@@ -26,10 +26,12 @@ export const Home: React.FC = () => {
 
   const onChangeCategory = React.useCallback((idx: number) => {
     dispatch(setCategoryId(idx))
+    // eslint-disable-next-line
   }, [])
 
   const onChangeSort = React.useCallback((id: { name: string, sortProperty: string }) => {
     dispatch(setSortType(id))
+    // eslint-disable-next-line
   }, [])
 
   const { categoryId, sort, currentPage, pagesCount, searchValue } = useSelector(selectFilter);
@@ -64,6 +66,7 @@ export const Home: React.FC = () => {
     }
 
     isMounted.current = true
+  // eslint-disable-next-line
   }, [categoryId, currentPage]);
 
   React.useEffect(() => {
@@ -77,6 +80,7 @@ export const Home: React.FC = () => {
 
       isMounted.current = true;
     }
+    // eslint-disable-next-line
   }, []);
 
   React.useEffect(() => {
@@ -90,6 +94,7 @@ export const Home: React.FC = () => {
     }
 
     isSearch.current = false;
+    // eslint-disable-next-line
   }, [categoryId, sort.sortProperty, currentPage, window.location.search]);
 
   const pizzas = items.filter((obj: ItemProps) => {

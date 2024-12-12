@@ -14,6 +14,7 @@ export const Search: React.FC = () => {
     dispatch(setSearchValue(''));
     inputRef.current?.focus();
   }
+  // eslint-disable-next-line
   const updateSearchValue = React.useCallback(
     debounce((value) => {
       dispatch(setSearchValue(value));
