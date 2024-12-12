@@ -1,0 +1,33 @@
+.root {
+  li {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      text-align: center;
+      line-height: 42px;
+      width: 45px;
+      height: 45px;
+      border: 1px solid #fe5e1f;
+      border-radius: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+      color: #fe5e1f;
+      transition: .5s;
+
+      &:hover {
+        background-color: #fe5e1f;
+        color: #fff;        
+      }
+    }
+  }
+
+  :global {
+    .selected {
+      a {
+        background-color: #fe5e1f;
+        color: #fff;
+      }      
+    }
+  }
+}
