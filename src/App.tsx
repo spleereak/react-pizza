@@ -23,7 +23,7 @@ export default function App() {
           }
         />
         <Route
-          path='/pizza:id'
+          path='/pizza/id'
           element={
             <React.Suspense fallback={<div>Идёт загрузка</div>}>
               <FullPizza />
